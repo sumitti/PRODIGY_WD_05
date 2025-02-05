@@ -24,7 +24,7 @@ A simple and modern weather website built using **HTML, CSS, and JavaScript**, p
 ---
 
 ## 🌐 Live Demo  
-[**🔗 Click Here**](https://your-live-demo-link.com) *(Replace with actual link)*  
+[**🔗 Click Here**](https://sumitti.github.io/PRODIGY_WD_05/)   
 
 ---
 
