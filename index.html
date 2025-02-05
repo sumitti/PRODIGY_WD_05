@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" integrity="sha512-r/Gan7ESRxJ/FqRvWjFQxTgPiu+q2K1n8+H/atR0/c+CvhaA6LwrWc39jdz/tCpR32YjNxi6/wT/tmjrwjL+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-container">
+    <div class="container">
+      <div class="cloud front">
+        <span class="left-front"></span>
+        <span class="right-front"></span>
+      </div>
+      <span class="sun sunshine"></span>
+      <span class="sun"></span>
+      <div class="cloud back">
+        <span class="left-back"></span>
+        <span class="right-back"></span>
+      </div>
+    </div>
+    <div class="glass-panel p-8 rounded-2xl shadow-2xl max-w-4xl w-full">
+      <div class="flex justify-between items-start mb-6">
+        <div>
+          <h1 id="cityName" class="text-2xl font-bold mb-1">Enter a city</h1>
+          <p id="date" class="text-gray-300 text-sm">Waiting for input...</p>
+        </div>
+        <div class="weather-icon-large">
+          <i id="weatherIconLarge"></i>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <p id="temperature" class="text-6xl font-extrabold">--°C</p>
+          <p id="description" class="text-xl text-gray-300 capitalize">--</p>
+        </div>
+        <div class="text-right">
+          <p id="wind" class="text-lg">Wind: --</p>
+          <p id="humidity" class="text-lg">Humidity: --</p>
+        </div>
+      </div>
+
+      <div class="flex space-x-4 overflow-x-auto pb-4" id="forecast">
+      </div>
+
+      <input 
+        type="text" 
+        id="cityInput" 
+        placeholder="Enter city name" 
+        class="w-full px-4 py-2 border rounded bg-gray-700 text-white focus:outline-none focus:ring focus:ring-blue-300 mb-4" 
+      />
+
+      <button 
+        id="getWeatherButton" 
+        class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 rounded focus:outline-none focus:ring focus:ring-blue-300 mb-4">
+        Get Weather
+      </button>
+
+      <div id="errorInfo" class="hidden text-red-500 mt-4"></div>
+    </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
