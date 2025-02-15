@@ -1,4 +1,3 @@
-//how can i hide this api key in the code?
 const apiKey = "f8aa17092f80c90b681477bf72e250c9";
 
 const cityName = document.getElementById("cityName");
